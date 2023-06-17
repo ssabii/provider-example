@@ -8,11 +8,7 @@ export interface CounterProps {
   decrease: () => void;
 }
 
-export const CounterContext = createContext<CounterProps>({
-  counter: 1,
-  increase: () => { },
-  decrease: () => { },
-});
+export const CounterContext = createContext<CounterProps | undefined>(undefined);
 
 interface CounterProviderProps {
   children: React.ReactNode;
