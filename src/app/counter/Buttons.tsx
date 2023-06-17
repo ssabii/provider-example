@@ -7,6 +7,7 @@ import { styled } from 'styled-components';
 
 function Buttons() {
   const { increase, decrease } = useCounter();
+  console.log(`Buttons`);
   return (
     <ButtonsBlock>
       <Button onClick={increase}>+</Button>
