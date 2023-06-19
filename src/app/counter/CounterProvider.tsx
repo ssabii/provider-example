@@ -1,5 +1,3 @@
-"use client";
-
 import { createContext, useMemo, useState } from "react";
 
 export interface CounterProps {

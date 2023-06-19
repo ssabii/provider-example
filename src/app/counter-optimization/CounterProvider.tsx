@@ -1,8 +1,10 @@
-"use client";
-
 import { createContext, useMemo, useState } from "react";
 
-export const CounterValueContext = createContext(0);
+export interface CounterValueProps {
+  counter: number;
+}
+
+export const CounterValueContext = createContext<CounterValueProps | undefined>(undefined);
 
 export interface CounterActionsProps {
   increase: () => void;
@@ -25,10 +27,10 @@ function CounterProvider({ children }: CounterProviderProps) {
 
   return (
     <CounterActionsContext.Provider value={actions}>
-      <CounterValueContext.Provider value={counter}>
+      <CounterValueContext.Provider value={{ counter }}>
         {children}
       </CounterValueContext.Provider>
-    </CounterActionsContext.Provider>
+    </CounterActionsContext.Provider >
   )
 }
 
