@@ -14,10 +14,6 @@ export default function Home() {
   )
 }
 
-interface Props {
-  data: string;
-}
-
 function Child1() {
   return <Child2 />
 }
