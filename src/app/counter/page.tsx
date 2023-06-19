@@ -13,10 +13,6 @@ function CounterPage() {
         <Value />
         <Buttons />
       </CounterProvider>
-      <CounterProvider>
-        <Value />
-        <Buttons />
-      </CounterProvider>
     </CounterBlock>
   )
 }
